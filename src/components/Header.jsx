@@ -1,21 +1,22 @@
+import { Link } from "react-router-dom"
 export default function Header() {
     return (
         <>
             <header className="header-img">
                 <div className="header__menu">
-                    <a href="#home" className="header__menu-logo">
+                    <Link to="/" className="header__menu-logo">
                         Fortnite Shop
-                    </a>
+                    </Link>
 
-                    <a href="#shop" className="header__menu-item">
+                    <Link to="/shop"  className="header__menu-item">
                         Shop
-                    </a>
-                    <a href="#about" className="header__menu-item">
+                    </Link>
+                    <Link to="/about" className="header__menu-item">
                         About
-                    </a>
-                    <a href="#contact" className="header__menu-item">
+                    </Link>
+                    <Link to="/contact"  className="header__menu-item">
                         Contact
-                    </a>
+                    </Link>
                 </div>
 
             </header>
