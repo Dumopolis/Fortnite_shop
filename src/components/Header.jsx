@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+
 export default function Header() {
     return (
         <>
@@ -18,7 +19,7 @@ export default function Header() {
                         Contact
                     </Link>
                 </div>
-
+                
             </header>
         </>
     )

@@ -15,12 +15,14 @@ export default function Card(props) {
                 <br />
                 <span className="main__shop__cards-item-price">{price}$</span>
             </div>
-            <button onClick={addToBasket({
+           
+             <button onClick={() => addToBasket({
                 id,
                 name,
-                price
+                price,
+                images
             })}
-                className="main__shop__cards-item-button"></button>
+                className="main__shop__cards-item-button"></button> 
         </div>
 
 

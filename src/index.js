@@ -12,6 +12,8 @@ import About from './components/About';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <HashRouter>
+    <React.StrictMode>
+
     <div className='body'>
       <Header />
       <main className='main'>
@@ -24,6 +26,7 @@ root.render(
       </main>
       <Footer />
     </div>
+    </React.StrictMode>
   </HashRouter>
 );
 

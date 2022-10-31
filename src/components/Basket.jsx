@@ -1,8 +1,8 @@
 
 export default function Basket(props) {
-    const { count = 0 } = props;
-    return (
-        <div className="basket">
+    const { countThingOnOrder = 0, handleBasket = Function.prototype } = props;
+    return (<>
+        <div onClick={handleBasket} className="basket">
             <svg  className='basket-icon' version="1.1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xlink="http://www.w3.org/1999/xlink" enableBackground="new 0 0 512 512" fill="url(#linear-gradient)" >
                 <g>
                     <g>
@@ -20,8 +20,9 @@ export default function Basket(props) {
                     </g>
                 </g>
             </svg>
-            <span className="basket-quantity">{count}</span>
-            {count ? <span className="basket-quantity">{count}</span> : null}
+            
+            {countThingOnOrder ? <span className="basket-quantity">{countThingOnOrder}</span> : <span className="basket-quantity">&#128126;</span>}
         </div>
+    </>
     )
 }

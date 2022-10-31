@@ -9,6 +9,15 @@
 
 @font-face {
 
+  font-family: "HoltwoodOneSC";
+
+  src: url("./fonts/HoltwoodOneSC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+
   font-family: "Frijole";
 
   src: url("./fonts/Frijole-Regular.ttf") format("truetype");
@@ -17,24 +26,26 @@
 }
 
 html {
-  background-color: black;
+  background-color: #030008;
   color: #FDE8FF;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'JejuHallasan', serif;
-  box-shadow: inset 4px 4px 70px #C558CC;
 }
 
 .body {
+  border-radius: 30px;
+  margin: 20px 0;
   width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow:  4px 4px 70px #C558CC;
 }
 
 .footer {
-  margin-top: 20px3;
+  margin-top: 20px;
   margin-bottom: 15px;
   font-family: 'Holtwood One CS'
 }
@@ -160,25 +171,28 @@ html {
   width: 350px;
   height: 500px;
   clip-path: path("M282.788 3H53C39.1929 3 28 14.1929 28 28V394.93C28 401.561 30.6339 407.92 35.3223 412.608L75.5348 452.821C80.2232 457.509 86.5821 460.143 93.2125 460.143H130.128H323C336.807 460.143 348 448.95 348 435.143V68.2125C348 61.5821 345.366 55.2232 340.678 50.5348L300.465 10.3223C295.777 5.63392 289.418 3 282.788 3Z"
-      );
+    );
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  position: relative;
+  z-index: -1;
+
 }
 
 .main__shop__cards-item-img img {
   max-height: 100%;
- 
 
-  
+
+
 }
+
 /* .main__shop__cards-item-name {}
 
 .main__shop__cards-item-price {} */
 
 .main__shop__cards-item-title {
-  
+
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -201,25 +215,203 @@ html {
 .main__shop__more-button:active {
   scale: 0.9;
 }
+
 .basket {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   position: fixed;
   top: 4rem;
-  right:10rem;
-  width: 60px;
-  height: 60px;
+  right: 10rem;
+  width: 70px;
+  height: 70px;
   /* border: #C558CC solid 1px; */
   border-radius: 30%;
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(151,26,159,1) 200%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(151, 26, 159, 1) 200%);
+  z-index: 1111;
 }
+
 .basket:active {
   scale: 0.9;
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(151,26,159,1) 180%)
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(151, 26, 159, 1) 180%)
 }
+
 .basket-icon {
+  margin-left: 10px;
   transform: scale(-1, 1);
-  
+
+
   width: 40px;
+}
+
+.basket-quantity {
+  color: #FDE8FF;
+  font-size: 1.2em;
+}
+
+.basket__list {
+  width: 1100px;
+  height: fit-content;
+  background: rgb(151, 26, 159);
+  background: radial-gradient(circle, rgba(151, 26, 159, 0.9) 5%, rgba(48, 93, 179, 0.95) 54%, rgba(38, 7, 40, 1) 90%);
+
+  border-radius: 43px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.basket__list__header {
+  width: 350px;
+  height: 90px;
+  border-radius: 25px;
+  background-color: rgba(38, 7, 40, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Frijole';
+  color: #FDE8FF;
+  font-size: 48px;
+  margin-top: 24px;
+}
+
+.basket__list__header-closer {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  font-family: 'Frijole';
+}
+
+.basket__list__header-closer:hover {
+  color: #fff9ff;
+}
+
+.basket__list__header-closer:active {
+  color: #030008
+}
+.basket__list-thanks{
+  margin: 80px 0px;
+  font-size: 48px;
+  width: 550px;
+  text-align: center;
+}
+
+.basket__list__item {
+  width: 920px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(38, 7, 40, 0.9);
+  border-radius: 25px;
+  margin-top: 10px;
+  font-size: 36px;
+  padding: 0px 20px;
+  position: relative;
+
+}
+
+.basket__list__item-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.basket__list__item-name {
+  width: 350px;
+  height: fit-content;
+  text-align: center;
+}
+
+.basket__list__item-price {
+  display: flex;
+  flex-direction: row;
+
+  width: 300px;
+  height: fit-content;
+  text-align: center;
+}
+
+.basket__list__item-price span {
+  margin-left: 20px;
+}
+
+.basket__list__item-sum {
+  width: 200px;
+  height: fit-content;
+  text-align: center;
+}
+
+.basket__list__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: HoltwoodOneSC;
+  width: 920px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.basket__list__footer-buy {
+  width: 250px;
+  height: 90px;
+  font-size: 32px;
+  text-align: center;
+  background: rgba(47, 162, 97, 0.85);
+  border-radius: 25px;
+}
+.basket__list__footer-buy:active{
+  opacity: 0.85;
+}
+.basket__list__footer-continue {
+  width: 250px;
+  height: 90px;
+  font-size: 28px;
+  text-align: center;
+  background: rgba(140, 89, 196, 0.85);
+  border-radius: 25px;
+
+}
+.basket__list__footer-continue:active{
+  opacity: 0.85;
+}
+
+.basket__list__footer-price {
+  width: 320px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.setter {
+  cursor: pointer;
+  color: #FDE8FF
+}
+
+
+.basket__list__item-closer{
+  cursor: pointer;
+  font-family: 'Frijole';
+  color: #FDE8FF;
+  font-size: 24px;
+}
+.basket__list__item-closer:hover {
+  color: #fff9ff;
+}
+
+.basket__list__item-closer:active {
+  color: #030008
+}
+span {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
