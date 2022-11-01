@@ -12,11 +12,11 @@ export default function BasketList(props) {
     const fullPrice = order.reduce(((acc, obj) => acc + (obj.price * obj.quantity)), 0)
 
     return (
-        <div className="basket__list">
+        <div className="BasketList">
 
-            <div className="basket__list__header">
+            <div className="Logo BasketList-Title Flex-Column-Center">
                 <h2>BASKET</h2>
-                <span onClick={handleBasket} className="basket__list__header-closer">X</span>
+                <span onClick={handleBasket} className="Closer BasketList-Closer">X</span>
             </div>
 
             {order.map((item) => <BasketItem
@@ -26,12 +26,12 @@ export default function BasketList(props) {
                 removeFromBasket={removeFromBasket}
             />)}
 
-            <div className="basket__list__footer">
-                <button className="basket__list__footer-buy" onClick={handleBuyNow}>BUY NOW</button>
+            <div className="BasketList-Footer">
+                <button className="Button BasketList-Button Background-Green" onClick={handleBuyNow}>BUY NOW</button>
                 <button
-                    className="basket__list__footer-continue"
+                    className="Button BasketList-Button Background-Purple"
                     onClick={handleBasket}>CONTINUE <br /> SHOPPING</button>
-                <span className="basket__list__footer-price">Full price: {fullPrice} $</span>
+                <span className="BasketList-Button">Full price {fullPrice} $</span>
             </div>
 
         </div>

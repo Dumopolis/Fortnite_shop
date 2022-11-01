@@ -10,13 +10,13 @@ export default function BasketItem(props) {
     } = props
 
     return (
-        <div className="basket__list__item">
-            <img className="basket__list__item-icon" src={images.icon} alt='icon' />
-            <span className="basket__list__item-name">{name}</span>
-            <div className="basket__list__item-price">
+        <div className="BasketList-Item Flex-Row-SpaceBetween">
+            <img className="BasketList-Item-Icon" src={images.icon} alt='icon' />
+            <span className="BasketList-Item-Name">{name}</span>
+            <div className="BasketList-Item-Price">
                 <span>{price} $</span>
                 
-                <span><span className="setter" onClick={() => decreaseQuantityItem({
+                <span><span className="Setter" onClick={() => decreaseQuantityItem({
                 id,
                 name,
                 price,
@@ -30,8 +30,8 @@ export default function BasketItem(props) {
             className="setter">+</span></span>
             </div>
 
-                <span className="basket__list__item-sum">{price * quantity} $</span>
-                <span onClick={() => removeFromBasket(id)} className="basket__list__item-closer">X</span>
+                <span className="BasketList-Item-Sum">{price * quantity} $</span>
+                <span onClick={() => removeFromBasket(id)} className="Closer">X</span>
         </div >
         
     )

@@ -6,23 +6,23 @@ export default function Card(props) {
         images } = props
     return (
 
-        <div className="main__shop__cards-item">
-            <div className="main__shop__cards-item-img">
-                <img src={images.background} alt="" />
-            </div>
-            <div className="main__shop__cards-item-title">
-                <span className="main__shop__cards-item-name">{name}</span>
+        <div className="Card Flex-Column-Center">
+
+            <img className="Card-Img" src={images.background} alt="" />
+
+            <div className="Title ">
+                {name}
                 <br />
-                <span className="main__shop__cards-item-price">{price}$</span>
+                {price} $
             </div>
-           
-             <button onClick={() => addToBasket({
+
+            <button onClick={() => addToBasket({
                 id,
                 name,
                 price,
                 images
             })}
-                className="main__shop__cards-item-button"></button> 
+                className="Button"></button>
         </div>
 
 

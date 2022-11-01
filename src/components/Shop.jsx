@@ -17,7 +17,7 @@ export default function Shop(props) {
     const [order, setOrder] = useState(setDefaultValue);
     const [isBasketShow, setBasketShow] = useState(false);
     const [isThanksShow, setThanksShow] = useState(false)
-    const { quantity } = props;
+    const { quantityCards } = props;
     
     const quantityItemOnOrder = order.reduce(((acc, obj) => acc + obj.quantity), 0);
    
@@ -115,9 +115,9 @@ export default function Shop(props) {
     }, [])
 
     return (
-        <div className="main__shop">
+        <div className="Shop Flex-Column-Center">
             
-            <img className="main__shop-img" src={header} alt="Shop Header" />
+            <img className="Shop-Img" src={header} alt="Shop Header" />
             {(isThanksShow)?<Thanks handleBuyNow={handleBuyNow} />:(isBasketShow) ? <BasketList
                 decreaseQuantityItem={decreaseQuantityItem}
                 addToBasket={addToBasket}
@@ -132,13 +132,10 @@ export default function Shop(props) {
 
             {(!loading) ?
                 <>
-                    <div className="main__shop__cards">
-                        <Cards shop={response} addToBasket={addToBasket} quantity={quantity} />
+                    <div className="Cards Flex-Row-Center">
+                        <Cards shop={response} addToBasket={addToBasket} quantityCards={quantityCards} />
                     </div>
-                    {(quantity <= 3) ?
-                        <div className="main__shop__more">
-                            <button className="main__shop__more-button"></button>
-                        </div> : <></>}
+                    {(quantityCards <= 3) ? <button className="Button Button-More"></button> : null}
                 </>
                 : <img width='300px' src={preloader} alt='preloader' />}
         </div>

@@ -1,0 +1,26 @@
+@font-face {
+
+    font-family: "JejuHallasan";
+  
+    src: url("./fonts/JejuHallasan-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+  
+    font-family: "HoltwoodOneSC";
+  
+    src: url("./fonts/HoltwoodOneSC.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+  
+    font-family: "Frijole";
+  
+    src: url("./fonts/Frijole-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
