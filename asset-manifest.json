@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fortnite_shop/static/css/main.d7575dfe.css",
-    "main.js": "/fortnite_shop/static/js/main.9134e393.js",
+    "main.js": "/fortnite_shop/static/js/main.173053f7.js",
     "static/media/JejuHallasan-Regular.ttf": "/fortnite_shop/static/media/JejuHallasan-Regular.a8978ba4715142988e29.ttf",
     "static/media/preloader.gif": "/fortnite_shop/static/media/preloader.2521ff4da2892b056974.gif",
     "static/media/header.png": "/fortnite_shop/static/media/header.d4c24bfc914a3c103d09.png",
@@ -13,10 +13,10 @@
     "static/media/button.svg": "/fortnite_shop/static/media/button.1587a7975f215607e7ac.svg",
     "index.html": "/fortnite_shop/index.html",
     "main.d7575dfe.css.map": "/fortnite_shop/static/css/main.d7575dfe.css.map",
-    "main.9134e393.js.map": "/fortnite_shop/static/js/main.9134e393.js.map"
+    "main.173053f7.js.map": "/fortnite_shop/static/js/main.173053f7.js.map"
   },
   "entrypoints": [
     "static/css/main.d7575dfe.css",
-    "static/js/main.9134e393.js"
+    "static/js/main.173053f7.js"
   ]
 }
