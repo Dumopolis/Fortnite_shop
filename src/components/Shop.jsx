@@ -6,6 +6,7 @@ import Basket from './Basket';
 import BasketList from './BasketList';
 import Thanks from './Thanks';
 import { Link } from 'react-router-dom';
+import { API_KEY } from './config';
 
 const setDefaultValue = () => {
     const userOrder = JSON.parse(localStorage.getItem('order'));
@@ -103,7 +104,7 @@ export default function Shop(props) {
         fetch(`https://fortniteapi.io/v2/items/list?lang=en`, {
             method: 'GET',
             headers:
-                { 'Authorization': '4666c65d-634a6cd5-8421f409-01a2578f' },
+                { 'Authorization': `${API_KEY}` },
 
             redirect: 'follow'
 
