@@ -5,10 +5,11 @@ import Cards from './Cards';
 import Basket from './Basket';
 import BasketList from './BasketList';
 import Thanks from './Thanks';
+import { Link } from 'react-router-dom';
 
 const setDefaultValue = () => {
     const userOrder = JSON.parse(localStorage.getItem('order'));
-    console.log(userOrder);
+    
     return userOrder ? userOrder : [];
 }
 export default function Shop(props) {
@@ -22,7 +23,9 @@ export default function Shop(props) {
     const quantityItemOnOrder = order.reduce(((acc, obj) => acc + obj.quantity), 0);
    
     const handleBasket = () => {
-        setBasketShow(!isBasketShow)
+        setBasketShow(!isBasketShow);
+        document.querySelector('body').classList.toggle('Overflow');
+        document.querySelector('.Basket-Opener').classList.toggle('None')
     }
     const addToBasket = (item) => {
         const itemIndex = order.findIndex(el => el.id === item.id)
@@ -126,7 +129,7 @@ export default function Shop(props) {
                 removeFromBasket={removeFromBasket}
                 handleBuyNow={handleBuyNow}
             /> : null}
-            <Basket
+            <Basket 
                 handleBasket={handleBasket}
                 countThingOnOrder={quantityItemOnOrder} />
 
@@ -135,9 +138,9 @@ export default function Shop(props) {
                     <div className="Cards Flex-Row-Center">
                         <Cards shop={response} addToBasket={addToBasket} quantityCards={quantityCards} />
                     </div>
-                    {(quantityCards <= 3) ? <button className="Button Button-More"></button> : null}
+                    {(quantityCards <= 4) ? <Link to="/market"  className="Button Button-More"></Link> : null}
                 </>
-                : <img width='300px' src={preloader} alt='preloader' />}
+                : <img className='Preloader' src={preloader} alt='preloader' />}
         </div>
     )
 

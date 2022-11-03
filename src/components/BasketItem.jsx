@@ -13,24 +13,29 @@ export default function BasketItem(props) {
         <div className="BasketList-Item Flex-Row-SpaceBetween">
             <img className="BasketList-Item-Icon" src={images.icon} alt='icon' />
             <span className="BasketList-Item-Name">{name}</span>
-            <div className="BasketList-Item-Price">
-                <span>{price} $</span>
+            <div className="BasketList-Item-Price ">
+                <span className="BasketList-Item-Quantity None">{price}</span>
+               <div className="Setter Flex-Row-SpaceBetween">
                 
-                <span><span className="Setter" onClick={() => decreaseQuantityItem({
+               <button className="Setter-Button" onClick={() => decreaseQuantityItem({
                 id,
                 name,
                 price,
                 images
-            })}>-</span>  {quantity}<span unselectable="on" onClick={() => addToBasket({
+            })}>-
+            </button>  
+            <span className="BasketList-Item-Quantity" >{quantity}</span>
+            <button className="Setter-Button" unselectable="on" onClick={() => addToBasket({
                 id,
                 name,
                 price,
                 images
             })}
-            className="setter">+</span></span>
+            >+</button>
+                </div> 
             </div>
 
-                <span className="BasketList-Item-Sum">{price * quantity} $</span>
+                <span className="BasketList-Item-Sum">{price * quantity}</span>
                 <span onClick={() => removeFromBasket(id)} className="Closer">X</span>
         </div >
         

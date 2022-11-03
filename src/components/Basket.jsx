@@ -2,7 +2,7 @@
 export default function Basket(props) {
     const { countThingOnOrder = 0, handleBasket = Function.prototype } = props;
     return (<>
-        <div onClick={handleBasket} className="Basket-Opener">
+        <div onClick={handleBasket} className="Basket-Opener Flex-Row-Center  ">
             <svg  className='Basket-Icon' version="1.1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xlink="http://www.w3.org/1999/xlink" enableBackground="new 0 0 512 512" fill="url(#linear-gradient)" >
                 <g>
                     <g>

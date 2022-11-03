@@ -1,71 +1,15 @@
-.Page {
-  background-color: #030008;
-  color: #FDE8FF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'JejuHallasan', serif;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.Body {
-  border-radius: 30px;
-  margin: 20px 0;
-  width: 1340px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 4px 4px 70px #C558CC;
-  position: relative;
-}
-
-.Footer {
-  margin-top: 20px;
-  margin-bottom: 15px;
-  font-family: 'Holtwood One CS'
-}
-
-.Header {
-  width: 1140px;
-  height: 400px;
-  color: #FDE8FF;
-  margin: 70px 0;
-}
-
-.Header-Img {
-  background-image: url(img/header.png);
-}
-
-.Header-Logo {
-  margin: 0 40px;
-}
-
-.Logo {
-  font-family: 'Frijole';
-  font-size: 48px;
-  line-height: 66px;
-
-}
-
-.Menu-Item {
-  font-size: 36px;
-  line-height: 36px;
-  margin-left: 70px;
-}
-
-.Menu:active {
-  opacity: 0.5;
-
-}
-
 .Flex-Column-Center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.Flex-Column-End {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .Flex-Row-Center {
@@ -82,83 +26,176 @@
   align-items: center;
 }
 
-.Main {
-  width: 1140px;
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.Page {
+  background-color: #030008;
+  color: #FDE8FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'JejuHallasan', serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.Body {
+  border-radius: 25px;
+  margin: 3rem 0;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 4px 70px #C558CC;
+  position: relative;
+}
+
+.Footer {
+
+  margin-bottom: 1rem;
+  font-family: 'Holtwood One CS'
+}
+
+.Preloader {
+  width: 300px;
+}
+
+.Header {
+  justify-content: left;
+  width: 75vw;
+  height: 450px;
+  color: #FDE8FF;
+  margin: 60px 0;
+
+}
+
+.Header-Img {
+  background-image: url(img/header.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.Menu {
+  width: 60vw;
+  flex-wrap: wrap;
+}
+
+.BurgerMenu-Items {
+  width: 30vw;
+}
+
+.Menu-Item {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  white-space: nowrap;
+
+}
+
+.Menu-Item:active {
+  opacity: 0.5;
+
+}
+
+.Logo {
+  font-family: 'Frijole';
+  font-size: 3rem;
+  line-height: 2.5rem;
+  width: 30vw;
+  white-space: nowrap;
 }
 
 .About {
-  margin-bottom: 70px;
+  margin-bottom: 6vh;
 
 }
 
 .About-Img {
-  width: 460px;
-  height: 522px;
-  margin-left: 54px;
+  width: 25vw;
+  height: 55vh;
+  object-fit: cover;
+  border-radius: 25px;
+  object-position: top;
 }
 
 .About-Text {
-  width: 572px;
-  height: 522px;
-
+  width: 34vw;
+  height: 55vh;
+  border-radius: 25px;
+  margin-left: 1vw;
+  border: rgba(48, 93, 179, 0.35) 1px solid
 }
 
 .About-Text-Content {
-  width: 410px;
+  width: 30vw;
+  height: fit-content;
 }
 
 .Text-Content {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   text-align: justify;
-  margin-top: 30px;
+  margin-top: 3vh;
 }
 
 .Title {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 2rem;
+  line-height: 2rem;
   text-align: center;
+  white-space: nowrap;
 }
 
-.Shop {
-  width: 1100px;
-
-}
+.Shop {}
 
 .Shop-Img {
-  box-shadow: 15px 15px 15px 3px rgba(130, 57, 136, 0.25);
-  border-radius: 30px;
-  width: 1032px;
-  height: 350px;
+  border-radius: 25px;
+  width: 55vw;
+  height: 40vh;
+  object-fit: fill;
+  min-height: 350px;
+  min-width: 850px;
+
+
 }
 
 .Cards {
-  margin-top: 50px;
   flex-wrap: wrap;
+  z-index: 1;
+  margin: 20px 0;
 }
 
 .Card-Img {
-  width: 350px;
+
+  width: 378px;
   height: 460px;
   clip-path: path("M282.788 3H53C39.1929 3 28 14.1929 28 28V394.93C28 401.561 30.6339 407.92 35.3223 412.608L75.5348 452.821C80.2232 457.509 86.5821 460.143 93.2125 460.143H130.128H323C336.807 460.143 348 448.95 348 435.143V68.2125C348 61.5821 345.366 55.2232 340.678 50.5348L300.465 10.3223C295.777 5.63392 289.418 3 282.788 3Z"
     );
   position: relative;
-  z-index: -1;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
 }
 
 .Button {
-  width: 350px;
+  width: 335px;
   height: 85px;
-  margin: 20px 0;
+  margin: 10px 0;
   background-image: url(img/button.svg);
-
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .Button-More {
-  width: 700px;
+  width: 50vw;
   background-image: url(img/button-more.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   margin: 50px 0;
 }
 
@@ -166,18 +203,17 @@
   scale: 0.9;
 }
 
+
+
 .Basket-Opener {
-  display: flex;
-  justify-content: left;
-  align-items: center;
   position: fixed;
-  top: 4rem;
-  right: 10rem;
-  width: 70px;
-  height: 70px;
+  top: 100px;
+  right: 150px;
+  width: 80px;
+  height: 80px;
   border-radius: 30%;
   background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(151, 26, 159, 1) 200%);
-
+  z-index: 10;
 }
 
 .Basket-Opener:active {
@@ -186,23 +222,23 @@
 }
 
 .Basket-Icon {
-  margin-left: 10px;
   transform: scale(-1, 1);
   width: 40px;
+  margin-left: 10px ;
 }
 
 .Basket-Quantity {
   color: #FDE8FF;
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  width: 30px;
 }
 
 .BasketList {
-  width: 1100px;
+  width: 60vw;
   height: fit-content;
   background: rgb(151, 26, 159);
   background: radial-gradient(circle, rgba(151, 26, 159, 0.9) 5%, rgba(48, 93, 179, 0.95) 54%, rgba(38, 7, 40, 1) 90%);
-
-  border-radius: 43px;
+  border-radius: 25px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -210,27 +246,27 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  z-index: 2;
 }
 
 .BasketList-Title {
-  width: 350px;
-  height: 90px;
+  width: 25vw;
+  height: 60px;
   border-radius: 25px;
   background-color: rgba(38, 7, 40, 0.6);
-  margin-top: 24px;
+  margin-top: 2vh;
 }
 
 
 .Closer {
   cursor: pointer;
   font-family: 'Frijole';
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #FDE8FF;
 }
 
 .BasketList-Closer {
-  font-size: 48px;
+  font-size: 2.5rem;
   position: absolute;
   top: 20px;
   right: 30px;
@@ -246,44 +282,44 @@
 
 
 .BasketList-Item {
-  width: 920px;
-  height: 60px;
+  width: 50vw;
   background-color: rgba(38, 7, 40, 0.6);
-  border-radius: 25px;
-  margin-top: 10px;
-  font-size: 36px;
-  padding: 0px 20px;
+  border-radius: 20px;
+  margin-top: 1vh;
+  font-size: 2rem;
+  padding: 0px 2vw;
   position: relative;
 }
 
 .BasketList-Item-Icon {
-  width: 50px;
-  height: 50px;
+  width: 3.5vw;
 }
 
 .BasketList-Item-Name {
-  width: 350px;
+  width: 20vw;
   height: fit-content;
   text-align: center;
+
 }
 
 .BasketList-Item-Price {
   display: flex;
   flex-direction: row;
-
-  width: 300px;
+  width: 20vw;
   height: fit-content;
   text-align: center;
 }
 
-.BasketList-Item-Price span {
-  margin-left: 20px;
-}
 
 .BasketList-Item-Sum {
-  width: 200px;
+  width: 10vw;
   height: fit-content;
   text-align: center;
+}
+
+.BasketList-Item-Quantity {
+  width: 8.4vw;
+  height: fit-content;
 }
 
 .BasketList-Footer {
@@ -292,14 +328,17 @@
   justify-content: space-between;
   align-items: center;
   font-family: HoltwoodOneSC;
-  width: 920px;
-  margin: 20px 0;
+  width: 52vw;
+  margin: 2vh 0;
 }
 
 .BasketList-Button {
-  width: 250px;
-  height: 90px;
-  font-size: 28px;
+  width: 12vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
   text-align: center;
   border-radius: 25px;
   margin: 0;
@@ -314,13 +353,427 @@
 }
 
 .Setter {
-  cursor: pointer;
-  color: #FDE8FF
+  width: 10vw;
+}
+
+.Setter-Button {
+  border: #C558CC 1px solid;
+  border-radius: 10px;
+}
+
+.Setter-Button:active {
+  opacity: 0.5;
 }
 
 .Thanks {
-  margin: 80px 0px;
-  font-size: 48px;
-  width: 550px;
+  margin: 7vh 0px;
+  font-size: 2.5rem;
+  width: 30vw;
   text-align: center;
+  line-height: 7vh;
+}
+
+@media (max-width:1570px) {
+  .Header {
+    height: 300px;
+  }
+
+  .BurgerMenu {
+    width: 36px;
+    height: 30px;
+    position: relative;
+  }
+
+  .BurgerMenu::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+
+    width: 36px;
+    height: 3px;
+    background-color: #FDE8FF;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  .BurgerMenu span {
+    position: absolute;
+    top: 10px;
+
+    width: 36px;
+    height: 3px;
+    background-color: #FDE8FF;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  .BurgerMenu::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+
+    width: 36px;
+    height: 3px;
+    background-color: #FDE8FF;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  .BurgerMenu.Active::after {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+
+  .BurgerMenu.Active::before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  .BurgerMenu.Active span {
+    opacity: 0;
+  }
+
+  .BurgerMenu-Items {
+    flex-direction: column;
+    opacity: 0;
+  }
+
+  .BurgerMenu-Items.Open {
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease-in-out;
+    /* box-shadow: -10px -2px 70px #C558CC; */
+    border-radius: 25px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 120px;
+    right: 30px;
+    opacity: 1;
+  }
+
+  .Shop-Img {
+    min-width: 50vw;
+    min-height: 250px;
+    height: 20vh;
+    max-height: 350px;
+  }
+
+  .BasketList-Item {
+    font-size: 1.5rem;
+  }
+
+  .BasketList-Button {
+    font-size: 1.1rem;
+    width: fit-content;
+    height: 80px;
+  }
+
+  .BasketList-Title {
+    font-size: 2rem;
+  }
+
+  .Basket-Opener {
+
+    width: 80px;
+    height: 80px;
+  }
+  
+   .Basket-Icon {
+    transform: scale(-1, 1);
+    width: 40px;
+    margin-left: 10px ;
+  }
+
+  .Basket-Quantity {
+    font-size: 1.2rem;
+    width: 30px;
+  }
+}
+
+@media (max-width:850px) {
+  .Menu-Item {
+    font-size: 2rem;
+  }
+
+  .Logo {
+    font-size: 2rem;
+    white-space: inherit;
+  }
+
+  .About-Img {
+    display: none;
+  }
+
+  .About-Text {
+    width: 60vw;
+    height: max-content;
+    padding: 10px;
+  }
+
+  .Text-Content {
+    width: 50vw;
+    font-size: 1.5rem;
+  }
+
+  .Header {
+    height: 200px;
+
+  }
+
+  .Shop-Img {
+    width: 60vw;
+    min-height: 150px;
+    height: 20vh;
+    max-height: 250px;
+  }
+
+  .Card-Img {
+    clip-path: none;
+    border-radius: 25px;
+    width: 25vw;
+    height: 200px;
+  }
+
+  .Card {
+    width: 25vw;
+    height: fit-content;
+    margin: 0 10px;
+  }
+
+  .Button {
+    width: 25vw;
+    height: 50px;
+
+  }
+
+  .Card-Name {
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+  }
+
+  .Button-More {
+    width: 50vw;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .Footer {
+    font-size: .7rem;
+  }
+
+  .BasketList-Item {
+    font-size: 1.2rem;
+  }
+
+  .BasketList-Button {
+    font-size: 1rem;
+    width: fit-content;
+    height: 50px;
+    border-radius: 15px;
+    margin-right: 5px;
+  }
+
+  .BasketList-Title {
+    font-size: 1.5rem;
+  }
+
+  .Closer {
+    font-size: .8rem;
+  }
+
+  .BasketList-Closer {
+    font-size: 1.5rem;
+  }
+  .Basket-Opener {
+    top: inherit;
+    bottom: 70px;
+    right: 10vw;
+    width: 50px;
+    height: 50px;
+  }
+  
+   .Basket-Icon {
+    transform: scale(-1, 1);
+    width: 25px;
+    margin-left: 10px ;
+  }
+
+  .Basket-Quantity {
+    font-size: .7rem;
+    width: 20px;
+  }
+
+}
+
+@media (max-width:576px) {
+  .Header {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .Menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Logo {
+    margin-top: -40px;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+
+  }
+
+  .BurgerMenu {
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+
+  .BurgerMenu-Items.Open {
+    top: 100px;
+  }
+
+  .Body {
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .About {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .About-Text {
+    width: 100%;
+    margin: 0 10px;
+
+  }
+
+  .About-Text-Content {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .Title {
+    font-size: 1.5rem;
+  }
+
+  .Shop-Img {
+    width: 93vw;
+    margin: 0 10px;
+  }
+
+  .Card {
+    width: 40vw;
+    height: 100%;
+  }
+
+  .Card-Img {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .Card-Name {
+    font-size: .8rem;
+    line-height: .8rem;
+  }
+
+  .Button {
+    margin: 0;
+    width: 100%;
+  }
+
+  .Preloader {
+    width: 100px;
+  }
+
+  .BasketList {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0px;
+  }
+
+  .BasketList-Title {
+    width: 50vw;
+    margin-top: 2vh;
+  }
+
+
+
+
+
+  .BasketList-Item {
+    width: 90vw;
+    height: 60px;
+
+    border-radius: 15px;
+
+    font-size: 1.3rem;
+
+
+  }
+
+  .None {
+    display: none;
+  }
+
+  .BasketList-Item-Icon {
+    display: none;
+  }
+
+  .BasketList-Item-Name {
+    width: 35vw;
+
+  }
+
+  .Setter {
+    width: 21vw;
+  }
+
+  .Setter-Button {
+
+    border-radius: 5px;
+  }
+
+
+  .BasketList-Item-Sum {
+    width: 20vw;
+  }
+
+  .BasketList-Item-Quantity {
+    width: 10vw;
+  }
+
+  .BasketList-Footer {
+    width: 90vw;
+
+  }
+
+  .BasketList-Button {
+    width: 27vw;
+    font-size: .7rem;
+    border-radius: 15px;
+
+  }
+
+  .Overflow {
+    overflow: hidden;
+  }
+  .BasketList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
 }

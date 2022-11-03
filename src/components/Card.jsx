@@ -10,10 +10,10 @@ export default function Card(props) {
 
             <img className="Card-Img" src={images.background} alt="" />
 
-            <div className="Title ">
+            <div className="Title Card-Name">
                 {name}
                 <br />
-                {price} $
+                {price}$
             </div>
 
             <button onClick={() => addToBasket({

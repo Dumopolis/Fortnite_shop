@@ -14,7 +14,7 @@ export default function Cards(props) {
         
         {item.map(thing => 
             { if (counter < quantityCards){
-                console.log(quantityCards);
+                
                 counter++
                 return <Card addToBasket={addToBasket} key={thing.id} {...thing}/>
             }
