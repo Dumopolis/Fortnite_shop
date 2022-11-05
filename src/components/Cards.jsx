@@ -5,7 +5,7 @@ import Card from "./Card";
 export default function Cards(props) {
     const {quantityCards, 
         addToBasket = Function.prototype,
-    shop = [],
+    shop,
 
     } = props;
 
