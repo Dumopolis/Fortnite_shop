@@ -1,13 +1,15 @@
+import { useContext } from "react"
+import { ShopContext } from "../context"
 import BasketItem from "./BasketItem"
 
-export default function BasketList(props) {
+export default function BasketList() {
     const { order,
         decreaseQuantityItem = Function.prototype,
         addToBasket = Function.prototype,
         handleBasket = Function.prototype,
         removeFromBasket = Function.prototype,
         handleBuyNow = Function.prototype,
-    } = props
+    } = useContext(ShopContext)
 
     const fullPrice = order.reduce(((acc, obj) => acc + (obj.price * obj.quantity)), 0)
 
@@ -34,7 +36,7 @@ export default function BasketList(props) {
                 <button
                     className="Button BasketList-Button Background-Purple "
                     onClick={handleBasket}>CONTINUE <br /> SHOPPING</button>
-                <span className="BasketList-Button">Full price {fullPrice}$</span>
+                <span className="BasketList-Button">Full price<br />{fullPrice}$</span>
             </div>
 
 

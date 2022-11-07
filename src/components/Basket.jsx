@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { ShopContext } from "../context";
 
-export default function Basket(props) {
-    const { countThingOnOrder = 0, handleBasket = Function.prototype } = props;
-    return (<>
+
+export default function Basket() {
+    const { order, handleBasket } = useContext(ShopContext)
+    const countThingOnOrder = order.reduce(((acc, obj) => acc + obj.quantity), 0) || 0;
+    return (
         <div onClick={handleBasket} className="Basket-Opener Flex-Row-Center  ">
             <svg  className='Basket-Icon' version="1.1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xlink="http://www.w3.org/1999/xlink" enableBackground="new 0 0 512 512" fill="url(#linear-gradient)" >
                 <g>
@@ -21,8 +25,8 @@ export default function Basket(props) {
                 </g>
             </svg>
             
-            {countThingOnOrder ? <span className="Basket-Quantity">{countThingOnOrder}</span> : <span className="basket-quantity">&#128126;</span>}
+            {(countThingOnOrder) ? <span className="Basket-Quantity">{countThingOnOrder}</span> : <span className="basket-quantity">&#128126;</span>}
         </div>
-    </>
+    
     )
 }

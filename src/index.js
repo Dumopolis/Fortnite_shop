@@ -10,22 +10,31 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
 import Home from './components/Market';
+import { ContextProvider } from './context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <HashRouter>
     <React.StrictMode>
-        <div className='Body Flex-Column-Center'>
-          <Header />
-          <main className='Main Flex-Column-Center'>
-            <Routes>
-              <Route exact path='/' element={<Home quantityCards={4} />} />
-              <Route path='about' element={<About />} />
-              <Route path='market' element={<Shop quantityCards={8} />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+      <div className='Body Flex-Column-Center'>
+        <Header />
+        <main className='Main Flex-Column-Center'>
+          <Routes>
+            <Route exact path='/' element={
+            <ContextProvider>
+              <Home quantityCards={4} />
+            </ContextProvider>
+            } />
+            <Route path='about' element={<About />} />
+            <Route path='market' element={
+              <ContextProvider>
+                <Shop quantityCards={8} />
+              </ContextProvider>
+            } />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </React.StrictMode>
   </HashRouter>
 );

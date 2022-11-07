@@ -1,9 +1,14 @@
+import { useContext } from "react"
+import { ShopContext } from "../context"
+
 export default function Card(props) {
-    const { addToBasket,
+    const {addToBasket} = useContext(ShopContext)
+    const { 
         name,
         price,
         id,
         images } = props
+        
     return (
 
         <div className="Card Flex-Column-Center">
